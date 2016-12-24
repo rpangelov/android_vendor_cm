@@ -389,6 +389,10 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.display.version=$(CM_DISPLAY_VERSION)
 
+# RPAngelov app's
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/app,system/app)
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/cm/config/partner_gms.mk
 -include vendor/cyngn/product.mk
